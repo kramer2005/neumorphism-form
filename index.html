@@ -18,45 +18,16 @@
       <div class="input-text checkbox-checked">
         <input type="password" name="password" id="password" />
         <input type="checkbox" name="show-password" id="show-password" />
-        <label for="password">Password</label>
+        <label for="password">Senha</label>
       </div>
 
       <div class="btnSubmit">
-        <input type="submit" value="Login" />
+        <input type="submit" value="LOGIN" />
       </div>
 
       <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
     </form>
 
-    <script>
-      const form = document.querySelector("form");
-      form.onsubmit = (e) => {
-        e.preventDefault();
-      };
-
-      const inputTexts = document.querySelectorAll(".input-text");
-      inputTexts.forEach((el) => {
-        const input = el.querySelector("input");
-        input.addEventListener("focus", () => {
-          el.classList.add("input-selected");
-        });
-        input.addEventListener("blur", () => {
-          if (input.value === "") {
-            el.classList.remove("input-selected");
-          }
-        });
-      });
-
-      const showPassword = form.querySelector("#show-password");
-      const password = form.querySelector("#password");
-      showPassword.addEventListener("change", () => {
-        console.log("ok");
-        if (showPassword.checked === true) {
-          password.type = "text";
-        } else {
-          password.type = "password";
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
