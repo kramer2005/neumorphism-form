@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
 
 * {
   outline: none;
@@ -43,15 +37,26 @@ form {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-shadow: inset -8px -8px 8px -5px #c4c4c4,
+  -webkit-box-shadow: inset 0 -8px 8px -5px #c4c4c4,
     5px 5px 10px -3px #c4c4c4, inset 8px 8px 8px -8px #ebebeb,
     -5px -5px 10px -3px #ebebeb;
-  box-shadow: inset -8px -8px 8px -5px #c4c4c4, 5px 5px 10px -3px #c4c4c4,
+  box-shadow: inset 0 -8px 8px -5px #c4c4c4, 5px 5px 10px -3px #c4c4c4,
     inset 8px 8px 8px -8px #ebebeb, -5px -5px 10px -3px #ebebeb;
-  border-radius: 10px;
   padding: 60px;
   position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 420px) {
+  form {
+    -webkit-box-shadow: inset -8px -8px 8px -5px #c4c4c4,
+      5px 5px 10px -3px #c4c4c4, inset 8px 8px 8px -8px #ebebeb,
+      -5px -5px 10px -3px #ebebeb;
+    box-shadow: inset -8px -8px 8px -5px #c4c4c4, 5px 5px 10px -3px #c4c4c4,
+      inset 8px 8px 8px -8px #ebebeb, -5px -5px 10px -3px #ebebeb;
+  border-radius: 10px;
   width: 300px;
+  }
 }
 
 h1 {
