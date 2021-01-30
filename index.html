@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neumorphism Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="#" method="POST">
+      <h1>Bem Vindo</h1>
+
+      <div class="input-text">
+        <input type="email" name="email" id="email" autocomplete="off" />
+        <label for="email">Email</label>
+      </div>
+
+      <div class="input-text checkbox-checked">
+        <input type="password" name="password" id="password" />
+        <input type="checkbox" name="show-password" id="show-password" />
+        <label for="password">Password</label>
+      </div>
+
+      <div class="btnSubmit">
+        <input type="submit" value="Login" />
+      </div>
+
+      <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+      form.onsubmit = (e) => {
+        e.preventDefault();
+      };
+
+      const inputTexts = document.querySelectorAll(".input-text");
+      inputTexts.forEach((el) => {
+        const input = el.querySelector("input");
+        input.addEventListener("focus", () => {
+          el.classList.add("input-selected");
+        });
+        input.addEventListener("blur", () => {
+          if (input.value === "") {
+            el.classList.remove("input-selected");
+          }
+        });
+      });
+
+      const showPassword = form.querySelector("#show-password");
+      const password = form.querySelector("#password");
+      showPassword.addEventListener("change", () => {
+        console.log("ok");
+        if (showPassword.checked === true) {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      });
+    </script>
+  </body>
+</html>

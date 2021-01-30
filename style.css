@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url(assets/fonts/Quicksand-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url(assets/fonts/Quicksand-Light.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url(assets/fonts/Quicksand-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url(assets/fonts/Quicksand-Bold.ttf) format("truetype");
+  font-weight: 800;
+}
+
+* {
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  background: #dddddd;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset -8px -8px 8px -5px #c4c4c4, 5px 5px 10px -3px #c4c4c4,
+    inset 8px 8px 8px -8px #ebebeb, -5px -5px 10px -3px #ebebeb;
+  border-radius: 10px;
+  padding: 60px;
+  position: relative;
+  width: 300px;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 1.3em;
+  font-weight: 800;
+}
+
+.input-text {
+  position: relative;
+  width: 100%;
+}
+
+.input-text input[type="password"],
+.input-text input[type="email"],
+.input-text input[type="text"] {
+  background: #dddddd;
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  padding: 0 6px 6px 6px;
+  margin-top: 2.2em;
+  font-size: 1em;
+  line-height: 1em;
+  border: none;
+  border-bottom: 1px solid #aaa;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  bottom: calc(0.5em);
+  right: 0;
+  appearance: none;
+  background: url("assets/images/eye.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+input[type="checkbox"]:checked {
+  background: url("assets/images/eye-hidden.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+label {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  transition: all 0.3s;
+  font-weight: 400;
+  color: #222;
+}
+
+.input-selected label {
+  bottom: calc(1em + 16px) !important;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.input-selected input[type="password"],
+.input-selected input[type="email"],
+.input-selected input[type="text"] {
+  border-bottom: 2px solid #aaa;
+  color: #F24405;
+}
+
+.btnSubmit {
+  border-radius: 32px;
+  margin-top: 30px;
+  padding: 4px;
+  box-shadow: inset -8px -8px 8px -5px #c4c4c4, 5px 5px 10px -3px #c4c4c4,
+    inset 8px 8px 8px -8px #ebebeb, -5px -5px 10px -3px #ebebeb;
+  cursor: pointer;
+}
+
+.btnSubmit input {
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 20px 50px;
+  background: #ddd;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+a {
+  color: #F24405;
+}
